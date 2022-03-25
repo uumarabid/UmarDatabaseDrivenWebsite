@@ -1,6 +1,5 @@
 <?php
 require_once "pdo.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +54,7 @@ require_once "pdo.php";
                     </div>
                     <div class="d-grid gap-2 mt-3">
                         <button class="btn btn-primary" type="submit" value="Create New User">Create new user</button>
-<!--                        <button type="button" class="btn btn-outline-primary">Sign in with Google</button>-->
+                        <!--                        <button type="button" class="btn btn-outline-primary">Sign in with Google</button>-->
                     </div>
                     <div class="mt-5 text-center">
                         <!-- needs to add page for sign up -->

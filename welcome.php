@@ -1,12 +1,15 @@
 <?php
+session_start();
 
-
-
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
 ?>
 
 <html>
     <head>
-        <title>welcome</title>
+        <title>Home Page</title>
     </head>
-    <body><h1>Thanks</h1></body>
+    <body><h1>Welcome  <?= $_SESSION['username']; ?></h1></body>
 </html>

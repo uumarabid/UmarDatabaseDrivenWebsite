@@ -4,15 +4,14 @@ require_once "pdo.php";
 if (isset($_POST['username']) && isset($_POST['thepass'])) {
     $my_hash = password_hash($_POST['thepass'], PASSWORD_DEFAULT);
     $sql = "INSERT INTO users (name, password)"
-            ."VALUES (:name, :password)"; //check this .  laater
-    echo("<pre>\n".$sql."\n</pre>\n");
+            . "VALUES (:name, :password)"; //check this .  laater
+    echo("<pre>\n" . $sql . "\n</pre>\n");
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(
         ':name' => $_POST['username'],
         ':password' => $my_hash));
-    $msg = "New member created. Please login";          
-}
-else{
+    $msg = "New member created. Please login";
+} else {
     $msg = "Login into members area";
 }
 ?>
@@ -69,7 +68,7 @@ else{
                     </div>
                     <div class="d-grid gap-2 mt-3">
                         <button class="btn btn-primary" type="submit" value="Create New User">Login</button>
-<!--                        <button type="button" class="btn btn-outline-primary">Sign in with Google</button>-->
+                        <!--                        <button type="button" class="btn btn-outline-primary">Sign in with Google</button>-->
                     </div>
                     <div class="mt-5 text-center">
                         <!-- needs to add page for sign up -->
