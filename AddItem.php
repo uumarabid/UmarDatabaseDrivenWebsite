@@ -6,7 +6,16 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
-    
+     if(isset($_POST['saveButton'])) {
+         $sql = "INSERT INTO toys (name, price, picture)"
+            . "VALUES (:name, :price, :picture)"; 
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(array(
+            ':name' => $_POST['toyName'],
+            ':price' => $_POST['toyPrice'],
+            ':picture' => $_POST['toyPicture']));
+         header("Location: welcome.php");
+     }
 }
 ?>
 
@@ -78,29 +87,28 @@ if (!isset($_SESSION['username'])) {
         </header>
         <div class="container">
             <main class="mt-5">
-                <form>
+                <form method="post">
                     <div class="form-group">
                         <label for="toyName">Name</label>
-                        <input type="text" class="form-control" id="toyName" aria-describedby="toyName" placeholder="Enter name">
+                        <input type="text" class="form-control" id="toyName" name="toyName" aria-describedby="toyName" placeholder="Enter name">
                     </div>
 
                     <div class="form-group">
                         <label for="toyPrice">Price</label>
-                        <input type="number" class="form-control" id="toyPrice" aria-describedby="toyPrice" placeholder="Enter price">
+                        <input type="number" class="form-control" id="toyPrice" name="toyPrice" aria-describedby="toyPrice" placeholder="Enter price">
                     </div>
 
                     <div class="form-group">
                         <label for="toyPicture">Picture</label>
-                        <input type="text" class="form-control" id="toyPicture" aria-describedby="toyPicture" placeholder="Upload picture">
+                        <input type="text" class="form-control" id="toyPicture" name="toyPicture" aria-describedby="toyPicture" placeholder="Upload picture">
                     </div>
                     <div class="row">
                         <div class="col-md-8">
 
                         </div>
                         <div class="col-md-4">
-                            <button class="btn btn-primary"> Save </button>
-                            <button class="btn btn-danger"> Cancel </button>
-
+                            <button type="submit" class="btn btn-primary" name="saveButton" id="saveButton"> Save </button>
+                            <a class="btn btn-danger" href="/SportShop/welcome.php"> Cancel </a>
                         </div>
                     </div>
                 </form>

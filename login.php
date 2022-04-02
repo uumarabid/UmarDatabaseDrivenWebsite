@@ -5,7 +5,6 @@ if (isset($_POST['username']) && isset($_POST['thepass'])) {
     $my_hash = password_hash($_POST['thepass'], PASSWORD_DEFAULT);
     $sql = "INSERT INTO users (name, password)"
             . "VALUES (:name, :password)"; //check this .  laater
-    echo("<pre>\n" . $sql . "\n</pre>\n");
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(
         ':name' => $_POST['username'],
