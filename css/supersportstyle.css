@@ -125,3 +125,9 @@ footer {
   margin-top: 10%;
   border-top: solid #52527a;
 }
+
+
+
+.disableUser{
+    cursor: default;
+}

@@ -6,8 +6,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
-    $stmt = $pdo->query("SELECT * FROM toys");
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
 }
 ?>
 
@@ -69,9 +68,6 @@ if (!isset($_SESSION['username'])) {
                             <li class="nav-item">
                                 <a class="nav-link" href="signin.html">Sign in</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link disableUser" href="#"><?= $_SESSION['username']; ?></a>
-                            </li>
                         </ul>
                     </section>
                 </section>
@@ -85,34 +81,38 @@ if (!isset($_SESSION['username'])) {
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Picture</th>                                    
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                    foreach ($rows as $row) {
-                                        echo "<tr><th  scope=\"row\">";
-                                        echo($row['id']);
-                                        echo("</th><td>");
-                                        echo($row['name']);
-                                        echo("</td><td>");
-                                         echo($row['price']);
-                                        echo("</td><td>");
-                                        echo($row['picture']);
-                                         echo("</td><td><button class=\"btn btn-primary\"> Edit </button> <button class=\"btn btn-danger\"> Delete </button>");
-                                        echo("</td></tr>");
-                                    }
-                                    ?>
-                            </tbody>
-                        </table>
+                    <div class="col-md-4">
+                        Name
+                    </div>
+                     <div class="col-md-8">
+                         <input type="text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        Price
+                    </div>
+                     <div class="col-md-8">
+                         <input type="number" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        Picture
+                    </div>
+                     <div class="col-md-8">
+                         <input type="text" />
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-8">
+                       
+                    </div>
+                     <div class="col-md-4">
+                                                  <button> Save </button>
+<button class="btn btn-danger"> Cancel </button>
+                         
                     </div>
                 </div>
             </main>
