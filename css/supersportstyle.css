@@ -1,0 +1,127 @@
+body {
+  background-color: #474747;
+  margin: 1%;
+}
+
+h1 {
+  text-align: center;
+  background-color: #e6e6e6;
+}
+
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 20px; */
+  width: 50%;
+}
+
+header figcaption {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* This technique is used to visually hide the skip link */
+header > a {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+/* This technique is used to reaveal the skip link */
+header > a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  color: #f9fafa;
+  background-color: #000000;
+}
+
+/* nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  width: 14%;
+  line-height: 30px;
+  font-size: 140%;
+  display: inline-block;
+  margin-right: 1px;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ddd1d1;
+}
+
+nav a:link {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #0000ff;
+  background: #ffffff;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: #615a5a;
+  background: #3f3535;
+}
+
+nav a:focus {
+  text-decoration: none;
+  color: #e066ff;
+  background: #000000;
+} */
+
+main {
+  line-height: 30px;
+}
+
+article {
+  font-family: arial;
+}
+
+/* CSS for catalogue page */
+
+section > h2 {
+  text-align: center;
+}
+
+main ul {
+  list-style-type: circle;
+  background-image: url("../images/star.jpg");
+}
+
+section figure {
+  display: inline-block;
+  width: 20%;
+  margin-right: 1%;
+}
+
+/* CSS for multimedia page */
+
+main > h2 {
+  text-align: center;
+}
+
+main > p {
+  font-weight: bold;
+}
+
+video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer {
+  background-color: #e6e6e6;
+  margin-top: 10%;
+  border-top: solid #52527a;
+}
