@@ -68,53 +68,42 @@ if (!isset($_SESSION['username'])) {
                             <li class="nav-item">
                                 <a class="nav-link" href="signin.html">Sign in</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link disableUser" href="#"><?= $_SESSION['username']; ?></a>
+                            </li>
                         </ul>
                     </section>
                 </section>
             </nav>
         </header>
         <div class="container">
-            <main>
-                <div class="row">
-                   <div class="col-md-12">
-                        <button class="btn btn-primary"> Add item </button>
+            <main class="mt-5">
+                <form>
+                    <div class="form-group">
+                        <label for="toyName">Name</label>
+                        <input type="text" class="form-control" id="toyName" aria-describedby="toyName" placeholder="Enter name">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        Name
+
+                    <div class="form-group">
+                        <label for="toyPrice">Price</label>
+                        <input type="number" class="form-control" id="toyPrice" aria-describedby="toyPrice" placeholder="Enter price">
                     </div>
-                     <div class="col-md-8">
-                         <input type="text" />
+
+                    <div class="form-group">
+                        <label for="toyPicture">Picture</label>
+                        <input type="text" class="form-control" id="toyPicture" aria-describedby="toyPicture" placeholder="Upload picture">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        Price
+                    <div class="row">
+                        <div class="col-md-8">
+
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-primary"> Save </button>
+                            <button class="btn btn-danger"> Cancel </button>
+
+                        </div>
                     </div>
-                     <div class="col-md-8">
-                         <input type="number" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        Picture
-                    </div>
-                     <div class="col-md-8">
-                         <input type="text" />
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-8">
-                       
-                    </div>
-                     <div class="col-md-4">
-                                                  <button> Save </button>
-<button class="btn btn-danger"> Cancel </button>
-                         
-                    </div>
-                </div>
+                </form>
             </main>
         </div>
         <section>
