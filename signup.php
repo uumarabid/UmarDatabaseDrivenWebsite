@@ -28,7 +28,7 @@ require_once "pdo.php";
             <form action="login.php" method="POST">
                 <fieldset>
                     <legend>
-                        <h1 class="mt-5 text-center">Welcome to create new user page</h1>
+                        <h1 class="mt-5 text-center">Welcome to create new user, page</h1>
                     </legend>
                     <p class="text-center">Please enter your details.</p>
 
@@ -54,11 +54,7 @@ require_once "pdo.php";
                     </div>
                     <div class="d-grid gap-2 mt-3">
                         <button class="btn btn-primary" type="submit" value="Create New User">Create new user</button>
-                        <!--                        <button type="button" class="btn btn-outline-primary">Sign in with Google</button>-->
-                    </div>
-                    <div class="mt-5 text-center">
-                        <!-- needs to add page for sign up -->
-<!--                        <p>Don't have an account? <a href="">Sign up</a></p>-->
+                        <a class="btn btn-secondary" href="login.php">Cancel</a>
                     </div>
                 </fieldset>
             </form>
