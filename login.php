@@ -66,8 +66,7 @@ if (isset($_POST['username']) && isset($_POST['thepass'])) {
                         </div>
                     </div>
                     <div class="d-grid gap-2 mt-3">
-                        <button class="btn btn-primary" type="submit" value="Create New User">Login</button>
-                        <!--                        <button type="button" class="btn btn-outline-primary">Sign in with Google</button>-->
+                        <button class="btn btn-primary" type="submit">Login</button>
                     </div>
                     <div class="mt-5 text-center">
                         <!-- needs to add page for sign up -->
