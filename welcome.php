@@ -81,7 +81,7 @@ if (!isset($_SESSION['username'])) {
             <main>
                 <div class="row">
                    <div class="col-md-12">
-                       <a class="btn btn-primary" href="/SportShop/AddItem.php"> Add item </a>
+                       <a class="btn btn-primary" href="AddItem.php"> Add item </a>
                     </div>
                 </div>
                 <div class="row">
