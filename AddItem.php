@@ -60,7 +60,7 @@ if (!isset($_SESSION['username'])) {
                     <section class="collapse navbar-collapse" id="collapsibleNavId">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                             <li class="nav-item active">
-                                <a class="nav-link" href="/index.html">Home <span class="visually-hidden">(current)</span></a>
+                                <a class="nav-link" href="/index.php">Home <span class="visually-hidden">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="catalogue.html">Catalogue</a>
