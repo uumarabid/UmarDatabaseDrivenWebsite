@@ -85,6 +85,17 @@ if (!isset($_SESSION['username'])) {
                             <div class="form-group">
                                 Are you sure, you want to delete this item?
                             </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-danger"> Yes </button>
+                                    <a class="btn btn-primary"> No </a>
+                                        
+                                </div>
+                                
+                            </div>
                             
                         </form>
 
