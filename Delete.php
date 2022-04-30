@@ -6,7 +6,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
-
+    
 }
 ?>
 
@@ -87,16 +87,15 @@ if (!isset($_SESSION['username'])) {
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
-                                    
+
                                 </div>
                                 <div class="col-md-4">
                                     <button type="submit" class="btn btn-danger"> Yes </button>
                                     <a class="btn btn-primary" href="welcome.php"> No </a>
-                                        
                                 </div>
-                                
+
                             </div>
-                            
+
                         </form>
 
 
