@@ -7,13 +7,21 @@ if (!isset($_SESSION['username'])) {
     exit();
 } else {
      if(isset($_POST['saveButton'])) {
+         // https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean
+         //https://www.w3schools.com/php/php_file_upload.asp
+         $target_dir = "images/";
+         $target_file = $target_dir . basename($_FILES["toyPicture"] ["name"]);
+         // https://stackoverflow.com/questions/19139434/php-move-a-file-into-a-different-folder-on-the-server
+         move_uploaded_file($_FILES["toyPicture"]["tmp_name"], $target_file);
+         echo basename($_FILES["toyPicture"]["name"]);
+         // save in database
          $sql = "INSERT INTO toys (name, price, picture)"
             . "VALUES (:name, :price, :picture)"; 
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array(
             ':name' => $_POST['toyName'],
             ':price' => $_POST['toyPrice'],
-            ':picture' => $_POST['toyPicture']));
+            ':picture' => $target_file));
          header("Location: welcome.php");
      }
 }
@@ -100,7 +108,7 @@ if (!isset($_SESSION['username'])) {
 
                     <div class="form-group">
                         <label for="toyPicture">Picture</label>
-                        <input type="file" class="form-control" id="toyPicture" name="toyPicture" aria-describedby="toyPicture" placeholder="Upload picture">
+                        <input type="file" class="form-control" name="toyPicture" aria-describedby="toyPicture" placeholder="Upload picture">
                     </div>
                     <div class="row">
                         <div class="col-md-8">

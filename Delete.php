@@ -101,12 +101,8 @@ if (!isset($_SESSION['username'])) {
                                     <button type="submit" class="btn btn-danger" name="deleteButton" id="saveButton"> Yes </button>
                                     <a class="btn btn-primary" href="welcome.php"> No </a>
                                 </div>
-
                             </div>
-
                         </form>
-
-
                     </div>
 
                 </div>
