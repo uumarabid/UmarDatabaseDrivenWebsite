@@ -124,8 +124,8 @@ if (!isset($_SESSION['username'])) {
 
                             </div>
                             <div class="col-md-4">
-                                <button>Save</button>
-                                <button>Cancel</button>
+                                <button type="submit" class="btn btn-primary" name="saveButton" id="saveButton">Save</button>
+                                <a class="btn btn-danger" href="welcome.php"> Cancel </a>
 
                             </div>
 
