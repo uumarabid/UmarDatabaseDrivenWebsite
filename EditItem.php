@@ -6,8 +6,24 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
-    $stmt = $pdo->query("SELECT * FROM toys");
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // checking the id 1st from database
+    if (isset($_GET['id'])) {
+        $toyId = $_GET['id'];
+        $stmt = $pdo->query("SELECT * FROM toys where id=$toyId");
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    if (isset($_POST['saveButton'])) {
+        $toyId = $_GET['id'];
+        // update item
+        $sql = "UPDATE toys SET name = :name, price = :price, picture = ;picture WHERE id = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(array(
+            ':name' => $_POST['toyname'],
+            ':price' => $_POST['toyPrice'],
+            ':picture' => $_POST['toyPicture'],
+            ':id' => $toyId
+        ));
+    }
 }
 ?>
 
