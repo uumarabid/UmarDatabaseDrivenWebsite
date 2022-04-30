@@ -97,40 +97,42 @@ if (!isset($_SESSION['username'])) {
             <main class="mt-2">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="toyName">Name</label>
-                            <input type="text" class="form-control" id="toyName" name="toyName" 
-                                   aria-describedby="toyName" placeholder="Enter name" 
-                                   value="<?= $row['name'] ?>" />
-                        </div>                        
-                        <div class="form-group">
-                            <label for="toyPrice">Name</label>
-                            <input type="text" class="form-control" id="toyPrice" name="toyPrice" 
-                                   aria-describedby="toyPrice" placeholder="Enter price" 
-                                   value="<?= $row['price'] ?>" />
-                        </div>
-                        <div class="form-group">
-                            <label for="toyPicture">Name</label>
-                            <input type="text" class="form-control" id="toyPicture" name="toyPicture" 
-                                   aria-describedby="toyPicture" placeholder="Upload picture" 
-                                   value="<?= $row['picture'] ?>" />
-                        </div>
-
-
-
-
-                        <div class="row">
-                            <div class="col-md-8">
-
+                        <h2> Edit item </h2>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="toyName">Name</label>
+                                <input type="text" class="form-control" id="toyName" name="toyName" 
+                                       aria-describedby="toyName" placeholder="Enter name" 
+                                       value="<?= $row['name'] ?>" />
+                            </div>                        
+                            <div class="form-group">
+                                <label for="toyPrice">Name</label>
+                                <input type="text" class="form-control" id="toyPrice" name="toyPrice" 
+                                       aria-describedby="toyPrice" placeholder="Enter price" 
+                                       value="<?= $row['price'] ?>" />
                             </div>
-                            <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary" name="saveButton" id="saveButton">Save</button>
-                                <a class="btn btn-danger" href="welcome.php"> Cancel </a>
-
+                            <div class="form-group">
+                                <label for="toyPicture">Name</label>
+                                <input type="text" class="form-control" id="toyPicture" name="toyPicture" 
+                                       aria-describedby="toyPicture" placeholder="Upload picture" 
+                                       value="<?= $row['picture'] ?>" />
                             </div>
 
-                        </div>
 
+
+
+                            <div class="row">
+                                <div class="col-md-8">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary" name="saveButton" id="saveButton">Save</button>
+                                    <a class="btn btn-danger" href="welcome.php"> Cancel </a>
+
+                                </div>
+
+                            </div>
+                        </form>
                     </div>
 
                 </div>
