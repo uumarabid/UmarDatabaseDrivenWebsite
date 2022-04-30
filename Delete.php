@@ -10,7 +10,7 @@ if (!isset($_SESSION['username'])) {
         $toyId = $_GET['id'];
         $sql = "DELETE FROM toys WHERE id = :id";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(array(":id => $toyId"));
+        $stmt->execute(array(':id' => $toyId));
         //redirect
         header("Location: welcome.php");
     }

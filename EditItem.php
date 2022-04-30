@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])) {
     if (isset($_POST['saveButton'])) {
         $toyId = $_GET['id'];
         // update item
-        $sql = "UPDATE toys SET name = :name, price = :price, picture = :picture WHERE id = :id;";
+        $sql = "UPDATE toys SET name = :name, price = :price, picture = :picture WHERE id = :id ";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array(
             ':name' => $_POST['toyname'],
@@ -107,13 +107,13 @@ if (!isset($_SESSION['username'])) {
                                        value="<?= $row['name'] ?>" />
                             </div>                        
                             <div class="form-group">
-                                <label for="toyPrice">Name</label>
+                                <label for="toyPrice">Price</label>
                                 <input type="text" class="form-control" id="toyPrice" name="toyPrice" 
                                        aria-describedby="toyPrice" placeholder="Enter price" 
                                        value="<?= $row['price'] ?>" />
                             </div>
                             <div class="form-group">
-                                <label for="toyPicture">Name</label>
+                                <label for="toyPicture">Picture</label>
                                 <input type="text" class="form-control" id="toyPicture" name="toyPicture" 
                                        aria-describedby="toyPicture" placeholder="Upload picture" 
                                        value="<?= $row['picture'] ?>" />
