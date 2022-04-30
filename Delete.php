@@ -6,6 +6,14 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
+    if (isset($_POST['deleteButton'])){
+        $toyId = $_GET['id'];
+        $sql = "DELETE FROM toys WHERE id = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(array(":id => $toyId"));
+        //redirect
+        header("Location: welcome.php");
+    }
     
 }
 ?>
@@ -90,7 +98,7 @@ if (!isset($_SESSION['username'])) {
 
                                 </div>
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-danger"> Yes </button>
+                                    <button type="submit" class="btn btn-danger" name="deleteButton" id="saveButton"> Yes </button>
                                     <a class="btn btn-primary" href="welcome.php"> No </a>
                                 </div>
 
