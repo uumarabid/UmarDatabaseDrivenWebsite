@@ -10,19 +10,20 @@ if (!isset($_SESSION['username'])) {
     if (isset($_GET['id'])) {
         $toyId = $_GET['id'];
         $stmt = $pdo->query("SELECT * FROM toys where id=$toyId");
-        $row = $stmt->fetchA(PDO::FETCH_ASSOC);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
     }
     if (isset($_POST['saveButton'])) {
         $toyId = $_GET['id'];
         // update item
-        $sql = "UPDATE toys SET name = :name, price = :price, picture = ;picture WHERE id = :id";
+        $sql = "UPDATE toys SET name = :name, price = :price, picture = :picture WHERE id = :id;";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array(
             ':name' => $_POST['toyname'],
             ':price' => $_POST['toyPrice'],
             ':picture' => $_POST['toyPicture'],
-            ':id' => $toyId
-        ));
+            ':id' => $toyId));
+        
+        header("Location: welcome.php");
     }
 }
 ?>

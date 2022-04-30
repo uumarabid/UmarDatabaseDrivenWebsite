@@ -80,8 +80,8 @@ if (!isset($_SESSION['username'])) {
         <div class="container">
             <main>
                 <div class="row">
-                   <div class="col-md-12">
-                       <a class="btn btn-primary" href="AddItem.php"> Add item </a>
+                    <div class="col-md-12">
+                        <a class="btn btn-primary" href="AddItem.php"> Add item </a>
                     </div>
                 </div>
                 <div class="row">
@@ -98,20 +98,23 @@ if (!isset($_SESSION['username'])) {
                             </thead>
                             <tbody>
                                 <?php
-                                    foreach ($rows as $row) {
-                                        echo "<tr><th  scope=\"row\">";
-                                        echo($row['id']);
-                                        echo("</th><td>");
-                                        echo($row['name']);
-                                        echo("</td><td> £");
-                                         echo($row['price']);
-                                        echo("</td><td>");
-                                        echo($row['picture']);
-                                        // sort this line of code
-                                        echo("</td><td><button class=\"btn btn-primary\"> Edit </button> <button class=\"btn btn-danger\"> Delete </button>");
-                                        echo("</td></tr>");
-                                    }
-                                    ?>
+                                foreach ($rows as $row) {
+                                    echo "<tr><th  scope=\"row\">";
+                                    echo($row['id']);
+                                    echo("</th><td>");
+                                    echo($row['name']);
+                                    echo("</td><td> £");
+                                    echo($row['price']);
+                                    echo("</td><td> <img class=\"itemImages\" src=\"");
+                                    echo($row['picture']);
+                                    echo("\"</td><td><a class=\"btn btn-primary\" href=\"EditItem.php?id=");
+                                    echo($row['id']);
+                                    echo("\"\> Edit </a> <a class=\"btn btn-danger\"  href=\"Delete.php?id=");
+                                    echo($row['id']);
+                                    echo("\"> Delete </a>");
+                                    echo("</td></tr>");
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>
