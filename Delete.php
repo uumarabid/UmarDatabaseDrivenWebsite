@@ -82,6 +82,9 @@ if (!isset($_SESSION['username'])) {
                     <div class="col-md-12">
                         <h2> Delete item </h2>
                         <form method="post">
+                            <div class="form-group">
+                                Are you sure, you want to delete this item?
+                            </div>
                             
                         </form>
 
