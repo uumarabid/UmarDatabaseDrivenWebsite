@@ -103,11 +103,12 @@ if (!isset($_SESSION['username'])) {
                                         echo($row['id']);
                                         echo("</th><td>");
                                         echo($row['name']);
-                                        echo("</td><td>");
+                                        echo("</td><td> £");
                                          echo($row['price']);
                                         echo("</td><td>");
                                         echo($row['picture']);
-                                         echo("</td><td><button class=\"btn btn-primary\"> Edit </button> <button class=\"btn btn-danger\"> Delete </button>");
+                                        // sort this line of code
+                                        echo("</td><td><button class=\"btn btn-primary\"> Edit </button> <button class=\"btn btn-danger\"> Delete </button>");
                                         echo("</td></tr>");
                                     }
                                     ?>

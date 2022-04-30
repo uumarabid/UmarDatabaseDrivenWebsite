@@ -10,7 +10,7 @@ if (!isset($_SESSION['username'])) {
     if (isset($_GET['id'])) {
         $toyId = $_GET['id'];
         $stmt = $pdo->query("SELECT * FROM toys where id=$toyId");
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $row = $stmt->fetchA(PDO::FETCH_ASSOC);
     }
     if (isset($_POST['saveButton'])) {
         $toyId = $_GET['id'];
@@ -97,6 +97,26 @@ if (!isset($_SESSION['username'])) {
             <main class="mt-2">
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="toyName">Name</label>
+                            <input type="text" class="form-control" id="toyName" name="toyName" 
+                                   aria-describedby="toyName" placeholder="Enter name" 
+                                   value="<?= $row['name'] ?>" />
+                        </div>                        
+                        <div class="form-group">
+                            <label for="toyPrice">Name</label>
+                            <input type="text" class="form-control" id="toyPrice" name="toyPrice" 
+                                   aria-describedby="toyPrice" placeholder="Enter price" 
+                                   value="<?= $row['price'] ?>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="toyPicture">Name</label>
+                            <input type="text" class="form-control" id="toyPicture" name="toyPicture" 
+                                   aria-describedby="toyPicture" placeholder="Upload picture" 
+                                   value="<?= $row['picture'] ?>" />
+                        </div>
+
+
 
 
                         <div class="row">
