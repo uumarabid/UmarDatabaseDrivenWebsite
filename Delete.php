@@ -91,7 +91,7 @@ if (!isset($_SESSION['username'])) {
                                 </div>
                                 <div class="col-md-4">
                                     <button type="submit" class="btn btn-danger"> Yes </button>
-                                    <a class="btn btn-primary"> No </a>
+                                    <a class="btn btn-primary" href="welcome.php"> No </a>
                                         
                                 </div>
                                 
