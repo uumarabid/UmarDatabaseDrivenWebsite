@@ -14,7 +14,7 @@ $stmtGetAll = $pdo->query("SELECT * FROM feedback");
 $rows = $stmtGetAll->fetchAll(PDO::FETCH_ASSOC);
 
 $customerName = "";
-$customerFeedback="";
+$customerFeedback = "";
 ?>
 
 <html lang="en-GB">
@@ -140,13 +140,8 @@ $customerFeedback="";
 
             </main>
         </div>
-        <section>
-            <footer>
-                <h3>Our Address:</h3>
-                <address>Ashton Old Road, Openshaw, Manchester, M11 2WH</address>
-                <a href="mailto:supersport@info.co.uk">Email Super Sport</a>
-                <h3>Copyrights &copy; refers to the legal rights of the owner.</h3>
-            </footer>
-        </section>
+        <?php
+        require_once "footer.php";
+        ?>
     </body>
 </html>

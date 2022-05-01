@@ -6,7 +6,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
-    if (isset($_POST['deleteButton'])){
+    if (isset($_POST['deleteButton'])) {
         $toyId = $_GET['id'];
         $sql = "DELETE FROM toys WHERE id = :id";
         $stmt = $pdo->prepare($sql);
@@ -14,7 +14,6 @@ if (!isset($_SESSION['username'])) {
         //redirect
         header("Location: welcome.php");
     }
-    
 }
 ?>
 
@@ -109,13 +108,8 @@ if (!isset($_SESSION['username'])) {
 
             </main>
         </div>
-        <section>
-            <footer>
-                <h3>Our Address:</h3>
-                <address>Ashton Old Road, Openshaw, Manchester, M11 2WH</address>
-                <a href="mailto:supersport@info.co.uk">Email Super Sport</a>
-                <h3>Copyrights &copy; refers to the legal rights of the owner.</h3>
-            </footer>
-        </section>
+        <?php
+        require_once "footer.php";
+        ?>
     </body>
 </html>

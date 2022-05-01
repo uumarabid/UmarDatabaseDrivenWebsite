@@ -6,8 +6,8 @@ require_once "pdo.php";
 //    header("Location: login.php");
 //    exit();
 //} else {
-    $stmt = $pdo->query("SELECT * FROM toys");
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $pdo->query("SELECT * FROM toys");
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //}
 ?>
 
@@ -100,13 +100,8 @@ require_once "pdo.php";
 
             </main>
         </div>
-        <section>
-            <footer>
-                <h3>Our Address:</h3>
-                <address>Ashton Old Road, Openshaw, Manchester, M11 2WH</address>
-                <a href="mailto:supersport@info.co.uk">Email Super Sport</a>
-                <h3>Copyrights &copy; refers to the legal rights of the owner.</h3>
-            </footer>
-        </section>
+        <?php
+        require_once "footer.php";
+        ?>
     </body>
 </html>

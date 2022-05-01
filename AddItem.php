@@ -6,24 +6,24 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
-     if(isset($_POST['saveButton'])) {
-         // 
-         //https://www.w3schools.com/php/php_file_upload.asp
-         $target_dir = "images/";
-         $target_file = $target_dir . basename($_FILES["toyPicture"] ["name"]);
-         // https://stackoverflow.com/questions/19139434/php-move-a-file-into-a-different-folder-on-the-server
-         move_uploaded_file($_FILES["toyPicture"]["tmp_name"], $target_file);
-         echo basename($_FILES["toyPicture"]["name"]);
-         // save in database
-         $sql = "INSERT INTO toys (name, price, picture)"
-            . "VALUES (:name, :price, :picture)"; 
+    if (isset($_POST['saveButton'])) {
+        // 
+        //https://www.w3schools.com/php/php_file_upload.asp
+        $target_dir = "images/";
+        $target_file = $target_dir . basename($_FILES["toyPicture"] ["name"]);
+        // https://stackoverflow.com/questions/19139434/php-move-a-file-into-a-different-folder-on-the-server
+        move_uploaded_file($_FILES["toyPicture"]["tmp_name"], $target_file);
+        echo basename($_FILES["toyPicture"]["name"]);
+        // save in database
+        $sql = "INSERT INTO toys (name, price, picture)"
+                . "VALUES (:name, :price, :picture)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array(
             ':name' => $_POST['toyName'],
             ':price' => $_POST['toyPrice'],
             ':picture' => $target_file));
-         header("Location: welcome.php");
-     }
+        header("Location: welcome.php");
+    }
 }
 ?>
 
@@ -95,9 +95,9 @@ if (!isset($_SESSION['username'])) {
         </header>
         <div class="container">
             <main class="mt-5">
-            <!-- https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean 
-                https://www.w3schools.com/tags/att_form_enctype.asp
-            -->
+                <!-- https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean 
+                    https://www.w3schools.com/tags/att_form_enctype.asp
+                -->
                 <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="toyName">Name</label>
@@ -125,13 +125,8 @@ if (!isset($_SESSION['username'])) {
                 </form>
             </main>
         </div>
-        <section>
-            <footer>
-                <h3>Our Address:</h3>
-                <address>Ashton Old Road, Openshaw, Manchester, M11 2WH</address>
-                <a href="mailto:supersport@info.co.uk">Email Super Sport</a>
-                <h3>Copyrights &copy; refers to the legal rights of the owner.</h3>
-            </footer>
-        </section>
+        <?php
+        require_once "footer.php";
+        ?>
     </body>
 </html>
