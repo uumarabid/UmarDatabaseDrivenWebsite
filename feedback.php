@@ -1,5 +1,20 @@
 <?php
 require_once "pdo.php";
+
+if (isset($_POST['saveButton'])) {
+    $sql = "INSERT INTO feedback (name, customerFeedback)"
+            . "VALUES (:name, :feedback)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(
+        ':name' => $_POST['customerName'],
+        ':feedback' => $_POST['feedback']));
+}
+
+$stmtGetAll = $pdo->query("SELECT * FROM feedback");
+$rows = $stmtGetAll->fetchAll(PDO::FETCH_ASSOC);
+
+$customerName = "";
+$customerFeedback="";
 ?>
 
 <html lang="en-GB">
@@ -72,12 +87,20 @@ require_once "pdo.php";
                         <h2 id="maincontent">
                             Reviews
                         </h2>
-
                     </div>
+                    <?php
+                    foreach ($rows as $row) {
+                        echo "<div class=\"col-md-12\"> <b>";
+                        echo($row['name']);
+                        echo("</b>: <q>");
+                        echo($row['customerFeedback']);
+                        echo("</q></div>");
+                    }
+                    ?>
 
                 </div>
 
-                <div class="row">
+                <div class="row mt-5">
                     <div class="col-md-12">
                         <h2>
                             Feedback
@@ -86,13 +109,15 @@ require_once "pdo.php";
                             <div class="form-group">
                                 <label for="customerName">Name</label>
                                 <input type="text" class="form-control" id="customerName" name="customerName" 
-                                       aria-describedby="customerName" placeholder="Enter name">
+                                       aria-describedby="customerName" placeholder="Enter name" 
+                                       value="<?= $customerName ?>" >
                             </div>
 
                             <div class="form-group">
                                 <label for="feedback">Feedback</label>
                                 <textarea class="form-control" id="feedback" name="feedback"
-                                          aria-describedby="feedback" placeholder="Please type your feedback here...">
+                                          aria-describedby="feedback" placeholder="Please type your feedback here..." 
+                                          value=" <?= $customerFeedback ?>" >
                                 </textarea>
                             </div>
 
