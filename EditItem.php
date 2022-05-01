@@ -18,7 +18,7 @@ if (!isset($_SESSION['username'])) {
         $sql = "UPDATE toys SET name = :name, price = :price, picture = :picture WHERE id = :id ";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array(
-            ':name' => $_POST['toyname'],
+            ':name' => $_POST['toyName'],
             ':price' => $_POST['toyPrice'],
             ':picture' => $_POST['toyPicture'],
             ':id' => $toyId));
