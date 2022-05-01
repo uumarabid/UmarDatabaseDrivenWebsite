@@ -6,7 +6,8 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
-  
+    $stmt = $pdo->query("SELECT * FROM toys");
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 
@@ -78,7 +79,28 @@ if (!isset($_SESSION['username'])) {
         </header>
         <div class="container">
             <main>
-                
+                <section>
+                    <h2 id="maincontent">Range of bats</h2>
+                    <div>
+                        <?php
+                        foreach ($rows as $row) {
+                            echo "<figure> <img src=\"";
+                            echo $row['picture'];
+                            echo "\" alt=\"";
+                            echo $row['name'];
+                            echo "\" />";
+                            echo("<figcaption>Name: <b> ");
+                            echo $row['name'];
+                            echo("</b> <br />Price:  <b> £");
+                            echo $row['price'];
+                            echo("</b></figcaption>");
+                            echo("</figure>");
+                        }
+                        ?> 
+
+                    </div>
+                </section>
+
             </main>
         </div>
         <section>

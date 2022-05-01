@@ -55,7 +55,7 @@ if (!isset($_SESSION['username'])) {
                                 <a class="nav-link" href="index.php">Home <span class="visually-hidden">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="catalogue.html">Catalogue</a>
+                                <a class="nav-link" href="catalogue.php">Catalogue</a>
                             </li>
                             <li class="nav-item">
                                 <a href="contactus.html" class="nav-link">Contact us</a>
