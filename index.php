@@ -28,7 +28,7 @@
             <a href="#maincontent">Skip to main content</a>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <section class="container">
-                    <a class="navbar-brand h1" href="/">Super Sport</a>
+                    <a class="navbar-brand h1" href="index.php">Super Sport</a>
                     <button
                         class="navbar-toggler d-lg-none"
                         type="button"

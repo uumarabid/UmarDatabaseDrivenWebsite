@@ -25,7 +25,7 @@
             <a href="#maincontent">Skip to main content</a>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <section class="container">
-                    <a class="navbar-brand h1" href="/">Entertainment</a>
+                    <a class="navbar-brand h1" href="multi-media.php">Entertainment</a>
                     <button
                         class="navbar-toggler d-lg-none"
                         type="button"

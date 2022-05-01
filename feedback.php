@@ -43,7 +43,7 @@ $customerFeedback = "";
             <a href="#maincontent">Skip to main content</a>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <section class="container">
-                    <a class="navbar-brand h1" href="/">Super Sport</a>
+                    <a class="navbar-brand h1" href="feedback.php">Customer Feedback</a>
                     <button
                         class="navbar-toggler d-lg-none"
                         type="button"
@@ -64,16 +64,16 @@ $customerFeedback = "";
                                 <a class="nav-link" href="catalogue.php">Catalogue</a>
                             </li>
                             <li class="nav-item">
-                                <a href="contactus.html" class="nav-link">Contact us</a>
+                                <a href="contactus.php" class="nav-link">Contact us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="feedback.php">Customer Feedback</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="multi-media.html">Multi-media</a>
+                                <a class="nav-link" href="multi-media.php">Multi-media</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="signin.html">Sign in</a>
+                                <a class="nav-link" href="login.php">Sign in</a>
                             </li>
                         </ul>
                     </section>
