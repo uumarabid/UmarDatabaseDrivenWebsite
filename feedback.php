@@ -1,6 +1,5 @@
 <?php
 require_once "pdo.php";
-
 ?>
 
 <html lang="en-GB">
@@ -73,9 +72,45 @@ require_once "pdo.php";
                         <h2 id="maincontent">
                             Reviews
                         </h2>
-                        
+
                     </div>
-                    
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>
+                            Feedback
+                        </h2>
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="customerName">Name</label>
+                                <input type="text" class="form-control" id="customerName" name="customerName" 
+                                       aria-describedby="customerName" placeholder="Enter name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="feedback">Feedback</label>
+                                <textarea class="form-control" id="feedback" name="feedback"
+                                          aria-describedby="feedback" placeholder="Please type your feedback here...">
+                                </textarea>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-md-10">
+
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary" name="saveButton" id="saveButton"> Save </button>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+
                 </div>
 
             </main>

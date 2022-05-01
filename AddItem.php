@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 } else {
      if(isset($_POST['saveButton'])) {
-         // https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean
+         // 
          //https://www.w3schools.com/php/php_file_upload.asp
          $target_dir = "images/";
          $target_file = $target_dir . basename($_FILES["toyPicture"] ["name"]);
@@ -95,7 +95,10 @@ if (!isset($_SESSION['username'])) {
         </header>
         <div class="container">
             <main class="mt-5">
-                <form method="post">
+            <!-- https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean 
+                https://www.w3schools.com/tags/att_form_enctype.asp
+            -->
+                <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="toyName">Name</label>
                         <input type="text" class="form-control" id="toyName" name="toyName" aria-describedby="toyName" placeholder="Enter name">
