@@ -1,14 +1,6 @@
 <?php
 require_once "pdo.php";
-//session_start();
-//
-//if (!isset($_SESSION['username'])) {
-//    header("Location: login.php");
-//    exit();
-//} else {
-    $stmt = $pdo->query("SELECT * FROM toys");
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//}
+
 ?>
 
 <html lang="en-GB">
@@ -55,7 +47,7 @@ require_once "pdo.php";
                                 <a class="nav-link" href="index.php">Home <span class="visually-hidden">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="catalogue.html">Catalogue</a>
+                                <a class="nav-link" href="catalogue.php">Catalogue</a>
                             </li>
                             <li class="nav-item">
                                 <a href="contactus.html" class="nav-link">Contact us</a>
@@ -67,7 +59,7 @@ require_once "pdo.php";
                                 <a class="nav-link" href="multi-media.html">Multi-media</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="login.php">Sign in</a>
+                                <a class="nav-link" href="signin.html">Sign in</a>
                             </li>
                         </ul>
                     </section>
@@ -75,28 +67,16 @@ require_once "pdo.php";
             </nav>
         </header>
         <div class="container">
-            <main>
-                <section>
-                    <h2 id="maincontent">Range of bats</h2>
-                    <div>
-                        <?php
-                        foreach ($rows as $row) {
-                            echo "<figure> <img src=\"";
-                            echo $row['picture'];
-                            echo "\" alt=\"";
-                            echo $row['name'];
-                            echo "\" />";
-                            echo("<figcaption>Name: <b> ");
-                            echo $row['name'];
-                            echo("</b> <br />Price:  <b> £");
-                            echo $row['price'];
-                            echo("</b></figcaption>");
-                            echo("</figure>");
-                        }
-                        ?> 
-
+            <main class="mt-2">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 id="maincontent">
+                            Reviews
+                        </h2>
+                        
                     </div>
-                </section>
+                    
+                </div>
 
             </main>
         </div>
