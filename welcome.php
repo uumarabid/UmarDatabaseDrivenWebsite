@@ -33,7 +33,6 @@ if (!isset($_SESSION['username'])) {
     <body>
         <header>
             <!-- Skip link to go directly to main content  -->
-            <!-- fix this skip link -->
             <a href="#maincontent">Skip to main content</a>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <section class="container">
@@ -81,7 +80,7 @@ if (!isset($_SESSION['username'])) {
             <main>
                 <div class="row">
                     <div class="col-md-12 mt-3">
-                        <a class="btn btn-primary" href="AddItem.php"> Add item </a>
+                        <a id="maincontent" class="btn btn-primary" href="AddItem.php"> Add item </a>
                     </div>
                 </div>
                 <div class="row">

@@ -24,7 +24,6 @@
     <body>
         <header>
             <!-- Skip link to go directly to main content  -->
-            <!-- fix this skip link -->
             <a href="#maincontent">Skip to main content</a>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <section class="container">
@@ -74,17 +73,17 @@
             <main>
                 <div class="row">
                     <div class="col-md-2 col-sm-12">
-                        <details>
+                        <details id="maincontent">
                             <summary>SS</summary>
                             <p>Super Sport was established in 1999.</p>
                         </details>
                         <details>
                             <summary>Inspired</summary>
-                            <p>Inspired by wrold renowed cricketers.</p>
+                            <p>Inspired by world famous cricketers.</p>
                         </details>
                         <details>
                             <summary>Goal</summary>
-                            <p>Our goal is to deliver brillient.</p>
+                            <p>Our goal is to deliver brilliant.</p>
                         </details>
                     </div>
                     <article class="col-md-10 col-sm-12">

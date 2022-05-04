@@ -49,7 +49,6 @@ if (!isset($_SESSION['username'])) {
     <body>
         <header>
             <!-- Skip link to go directly to main content  -->
-            <!-- fix this skip link -->
             <a href="#maincontent">Skip to main content</a>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <section class="container">
@@ -68,7 +67,7 @@ if (!isset($_SESSION['username'])) {
                     <section class="collapse navbar-collapse" id="collapsibleNavId">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                             <li class="nav-item active">
-                                <a class="nav-link" href="/index.php">Home <span class="visually-hidden">(current)</span></a>
+                                <a class="nav-link" href="index.php">Home <span class="visually-hidden">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="catalogue.php">Catalogue</a>
@@ -100,7 +99,7 @@ if (!isset($_SESSION['username'])) {
                 -->
                 <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="toyName">Name</label>
+                        <label id="maincontent" for="toyName">Name</label>
                         <input type="text" class="form-control" id="toyName" name="toyName" aria-describedby="toyName" placeholder="Enter name">
                     </div>
 

@@ -39,7 +39,6 @@ if (!isset($_SESSION['username'])) {
     <body>
         <header>
             <!-- Skip link to go directly to main content  -->
-            <!-- fix this skip link -->
             <a href="#maincontent">Skip to main content</a>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <section class="container">
@@ -87,7 +86,7 @@ if (!isset($_SESSION['username'])) {
             <main class="mt-2">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2> Delete item </h2>
+                        <h2 id="maincontent"> Delete item </h2>
                         <form method="post">
                             <div class="form-group">
                                 Are you sure, you want to delete this item?

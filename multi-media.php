@@ -21,7 +21,6 @@
     <body>
         <header>
             <!-- Skip link to go directly to main content  -->
-            <!-- fix this skip link -->
             <a href="#maincontent">Skip to main content</a>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <section class="container">
