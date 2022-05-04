@@ -20,7 +20,7 @@ $customerFeedback = "";
 <html lang="en-GB">
     <head>
         <meta charset="UTF-8" />
-        <title>Super Sport</title>
+        <title>Feedback</title>
         <link rel="icon" href="./images/super-sport.jpg" type="image/icontype" />
         <link href="css/supersportstyle.css" type="text/css" rel="stylesheet" />
         <link
