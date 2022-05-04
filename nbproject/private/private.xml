@@ -3,16 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/wamp64/www/SportShop/login.php</file>
+            <file>file:/C:/wamp64/www/SportShop/index.php</file>
+            <file>file:/C:/wamp64/www/SportShop/AddItem.php</file>
+            <file>file:/C:/wamp64/www/SportShop/catalogue.php</file>
+            <file>file:/C:/wamp64/www/SportShop/pdo.php</file>
             <file>file:/C:/wamp64/www/SportShop/signup.php</file>
             <file>file:/C:/wamp64/www/SportShop/EditItem.php</file>
             <file>file:/C:/wamp64/www/SportShop/Delete.php</file>
             <file>file:/C:/wamp64/www/SportShop/member.php</file>
-            <file>file:/C:/wamp64/www/SportShop/login.php</file>
-            <file>file:/C:/wamp64/www/SportShop/index.php</file>
-            <file>file:/C:/wamp64/www/SportShop/AddItem.php</file>
+            <file>file:/C:/wamp64/www/SportShop/contactus.php</file>
+            <file>file:/C:/wamp64/www/SportShop/footer.php</file>
+            <file>file:/C:/wamp64/www/SportShop/feedback.php</file>
             <file>file:/C:/wamp64/www/SportShop/welcome.php</file>
-            <file>file:/C:/wamp64/www/SportShop/catalogue.php</file>
-            <file>file:/C:/wamp64/www/SportShop/pdo.php</file>
+            <file>file:/C:/wamp64/www/SportShop/css/supersportstyle.css</file>
+            <file>file:/C:/wamp64/www/SportShop/multi-media.php</file>
         </group>
     </open-files>
 </project-private>
