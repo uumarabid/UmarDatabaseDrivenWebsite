@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
 <html lang="en-GB">
     <head>
         <meta charset="UTF-8" />
-        <title>Super Sport</title>
+        <title>Admin</title>
         <link rel="icon" href="./images/super-sport.jpg" type="image/icontype" />
         <link href="css/supersportstyle.css" type="text/css" rel="stylesheet" />
         <link
@@ -105,7 +105,7 @@ if (!isset($_SESSION['username'])) {
                                     echo($row['name']);
                                     echo("</td><td> £");
                                     echo($row['price']);
-                                    echo("</td><td> <img class=\"itemImages\" src=\"");
+                                    echo("</td><td> <img src=\"");
                                     echo($row['picture']);
                                     echo("\"</td><td><a class=\"btn btn-primary\" href=\"EditItem.php?id=");
                                     echo($row['id']);

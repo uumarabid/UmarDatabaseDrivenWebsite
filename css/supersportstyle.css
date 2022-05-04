@@ -131,3 +131,8 @@ footer {
 .disableUser{
     cursor: default;
 }
+
+img{
+    width: 60px;
+    
+}

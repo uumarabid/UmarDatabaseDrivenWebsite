@@ -15,6 +15,7 @@ if (!isset($_SESSION['username'])) {
     if (isset($_POST['saveButton'])) {
         $toyId = $_GET['id'];
         // update item
+        //$sql = "update toys set name = :name, price = :price where id =:id ;";
         $sql = "UPDATE toys SET name = :name, price = :price, picture = :picture WHERE id = :id ";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array(
@@ -31,7 +32,7 @@ if (!isset($_SESSION['username'])) {
 <html lang="en-GB">
     <head>
         <meta charset="UTF-8" />
-        <title>Super Sport</title>
+        <title>Edit Admin</title>
         <link rel="icon" href="./images/super-sport.jpg" type="image/icontype" />
         <link href="css/supersportstyle.css" type="text/css" rel="stylesheet" />
         <link

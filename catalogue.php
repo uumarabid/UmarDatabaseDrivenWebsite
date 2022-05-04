@@ -14,7 +14,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en-GB">
     <head>
         <meta charset="UTF-8" />
-        <title>Super Sport</title>
+        <title>Catalogue</title>
         <link rel="icon" href="./images/super-sport.jpg" type="image/icontype" />
         <link href="css/supersportstyle.css" type="text/css" rel="stylesheet" />
         <link
@@ -77,11 +77,11 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="container">
             <main>
                 <section>
-                    <h2 id="maincontent">Range of bats</h2>
+                    <h2 id="maincontent" class="mt-3">Range of bats</h2>
                     <div>
                         <?php
                         foreach ($rows as $row) {
-                            echo "<figure> <img src=\"";
+                            echo "<figure class=\"mt-3\"> <img src=\"";
                             echo $row['picture'];
                             echo "\" alt=\"";
                             echo $row['name'];
