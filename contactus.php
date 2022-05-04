@@ -65,31 +65,58 @@
 
         <div class="container">
             <main class="mt-2">
-                <form action="submit.html" method="get">
-                    <!-- A hidden field let web developers include data that cannot be seen or modified by users when a form is submitted. -->
-                    <input type="hidden" id="custId" name="custId" value="3487" />
 
-                    <fieldset id="maincontent">
-                        <legend><h2>Your Details</h2></legend>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <h2>
+                            Your Details
+                        </h2>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="fname">First name: </label>
+                                <input type="text" class="form-control" id="fname" name="fname" 
+                                       placeholder="Enter first name">
+                            </div>
 
-                        <label for="fname">First name:</label><input type="text" id="fname" placeholder="John" />
-                        <label for="lname">Last name:</label><input type="text" id="lname" required />
+                            <div class="form-group mt-2">
+                                <label for="lname">Last name: </label>
+                                <input type="text" class="form-control" id="lname" name="lname" 
+                                       placeholder="Enter last name">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="emailaddress">Email address: </label>
+                                <input type="email" class="form-control" id="emailaddress" name="emailaddress" 
+                                       placeholder="Enter email">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="phone">Enter your phone number: </label>
+                                <input type="tel" class="form-control" id="phone" name="phone" 
+                                       placeholder="Number">
+                            </div>
 
-                        <label for="emailaddress">Email address:</label>
-                        <input type="email" name="email" id="emailaddress" />
+                            <div class="form-group mt-4">
+                                <label for="enquiry">Your enquiry: </label>
+                                <textarea class="form-control" id="enquiry" name="enquiry"
+                                          >
+                                </textarea>
+                            </div>
 
-                        <label for="phone">Enter your phone number:</label>
-                        <input type="tel" id="phone" name="phone" />
-                    </fieldset>
+                            <div class="row mt-2">
+                                <div class="col-md-10">
 
-                    <fieldset>
-                        <legend><h2>Your enquiry</h2></legend>
-                        <label for="comments">Enquiry about:</label>
-                        <textarea rows="4" cols="40" id="comments" placeholder="Type here.."></textarea>
-                    </fieldset>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary" name="saveButton" id="saveButton"> Save </button>
+                                </div>
+                            </div>
 
-                    <input type="submit" value="Submit" />
-                </form>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
             </main>
         </div>
         <?php
