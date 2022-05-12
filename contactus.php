@@ -70,7 +70,7 @@
                         <h2>
                             Your Details
                         </h2>
-                        <form method="post">
+                        <form id="maincontent" method="post">
                             <div class="form-group">
                                 <label for="fname">First name: </label>
                                 <input type="text" class="form-control" id="fname" name="fname" 
