@@ -87,6 +87,9 @@ if (!isset($_SESSION['username'])) {
                             <li class="nav-item">
                                 <a class="nav-link disableUser" href="#"><?= $_SESSION['username']; ?></a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout.php">Logout</a>
+                            </li>
                         </ul>
                     </section>
                 </section>

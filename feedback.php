@@ -125,7 +125,7 @@ $customerFeedback = "";
 
                                 </div>
                                 <div class="col-md-2">
-                                    <button type="submit" class="btn btn-primary" name="saveButton" id="saveButton"> Save </button>
+                                    <button type="submit" class="btn btn-primary" name="saveButton" id="saveButton"> Submit </button>
                                 </div>
                             </div>
 
