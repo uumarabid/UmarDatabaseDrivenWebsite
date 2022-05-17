@@ -85,7 +85,7 @@ if (isset($_POST['username']) && isset($_POST['thepass'])) {
             <form id="maincontent" action="member.php" method="POST">
                 <fieldset>
                     <legend>
-                        <h1 class="mt-5 text-center"><?= $msg; ?></h1>
+                        <h1 class="mt-5 text-center">Welcome<?= " $msg"; ?></h1>
                     </legend>
                     <p class="text-center">Please enter your details.</p>
 

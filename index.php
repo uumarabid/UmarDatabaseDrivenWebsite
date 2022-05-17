@@ -90,7 +90,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <h2>About us</h2>
-                                <p id="maincontent">
+                                <p>
                                     We are an established business with over 20 years of experience who specialise in cricket bats and have an
                                     excellent track record for best customer service. <abbr title="Super Sport">SS</abbr> has never compromised on
                                     the quality and service provided to our customers. We believe in keeping our customers happy and providing them

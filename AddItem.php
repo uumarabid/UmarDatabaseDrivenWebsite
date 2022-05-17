@@ -113,7 +113,7 @@ if (!isset($_SESSION['username'])) {
 
                     <div class="form-group">
                         <label for="toyPicture">Picture</label>
-                        <input type="file" class="form-control" name="toyPicture" aria-describedby="toyPicture" placeholder="Upload picture">
+                        <input type="file" class="form-control" name="toyPicture" aria-describedby="toyPicture" id="toyPicture">
                     </div>
                     <div class="row">
                         <div class="col-md-8">
